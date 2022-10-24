@@ -8,10 +8,10 @@ namespace Lab1Task2
         {
             Console.WriteLine("сколько будет строк?");
             int n;
-            n = AllParse.IntParse();
-            for (int i = 1; i <= n; i++)
+            n = TryParse.IntTryParse();
+            for (int i = 0; i < n; i++)
             {
-                for (int c = 1; c <= i; c++)
+                for (int c = 0; c < i; c++)
                 {
                     Console.Write("*");
                 }

@@ -1,40 +1,79 @@
 ﻿namespace Parse
 {
-    public static class AllParse
+    public static class TryParse
     {
-        public static int IntParse()
+        public static int IntTryParse()
         {
-            int result;
-            bool secsessful = int.TryParse(Console.ReadLine(), out result);
-            if (!secsessful)
+            int result = 0;
+            bool tr = true;
+            while (tr)
             {
-                Console.WriteLine("Введите число");
-                 secsessful = int.TryParse(Console.ReadLine(), out result);
-                return result;
+                bool successful = int.TryParse(Console.ReadLine(), out result);
+                if (!successful)
+                {
+                    Console.WriteLine("Введите число!\nПопробуйте снова:");
+                }
+                else
+                {
+                    if (result < 0)
+                    {
+                        Console.WriteLine("Вы ввели отрицательное значение, пожалуйста, введите положительное значение!");
+                    }
+                    else
+                    {
+                        tr = false;
+                    }
+                }
             }
             return result;
         }
-        public static double DoubleParse()
+        public static double DoubleTryParse()
         {
-            double result;
-            bool secsessful = double.TryParse(Console.ReadLine(), out result);
-            if (!secsessful)
+            double result = 0;
+            bool tr = true;
+            while (tr)
             {
-                Console.WriteLine("Введите число");
-                secsessful = double.TryParse(Console.ReadLine(), out result);
-                return result;
+                bool successful = double.TryParse(Console.ReadLine(), out result);
+                if (!successful)
+                {
+                    Console.WriteLine("Введите число!\nПопробуйте снова:");
+                }
+                else
+                {
+                    if (result < 0)
+                    {
+                        Console.WriteLine("Вы ввели отрицательное значение, пожалуйста, введите положительное значение!");
+                    }
+                    else
+                    {
+                        tr = false;
+                    }
+                }
             }
             return result;
         }
-        public static byte ByteParse()
+        public static byte ByteTryParse()
         {
-            byte result;
-            bool secsessful = byte.TryParse(Console.ReadLine(), out result);
-            if (!secsessful)
+            byte result = 0;
+            bool tr = true;
+            while (tr)
             {
-                Console.WriteLine("Введите число");
-                 secsessful = byte.TryParse(Console.ReadLine(), out result);
-                return result;
+                bool successful = byte.TryParse(Console.ReadLine(), out result);
+                if (!successful)
+                {
+                    Console.WriteLine("Введите число!\nПопробуйте снова:");
+                }
+                else
+                {
+                    if (result < 0)
+                    {
+                        Console.WriteLine("Вы ввели отрицательное значение, пожалуйста, введите положительное значение!");
+                    }
+                    else
+                    {
+                        tr = false;
+                    }
+                }
             }
             return result;
         }

@@ -12,16 +12,12 @@ namespace Lab1Task6
             double s;
             double p;
             Console.Write("a=");
-            a = AllParse.DoubleParse();
+            a = TryParse.DoubleTryParse();
             Console.Write("b=");
-            b = AllParse.DoubleParse();
+            b = TryParse.DoubleTryParse();
             Console.Write("c=");
-            c = AllParse.DoubleParse();
-            if (a <= 0 || b <= 0 || c <= 0)
-            {
-                Console.Write("сторона не может быть отрицательной или равной нулю");
-                return;
-            }
+            c = TryParse.DoubleTryParse();
+            
             if (a + b < c || a + c < b || b + c < a)
             {
                 Console.Write("треугольник не существует");

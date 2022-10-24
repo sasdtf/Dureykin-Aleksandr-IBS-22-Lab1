@@ -10,19 +10,9 @@ namespace Lab1Task1
             double b;
             double s;
             Console.WriteLine("a=");
-            a = AllParse.DoubleParse();
-            if (a <= 0)
-            {
-                Console.WriteLine("неверное значение a");
-                return;
-            }
+            a = TryParse.DoubleTryParse();
             Console.WriteLine("b=");
-            b = AllParse.DoubleParse();
-            if (b <= 0)
-            {
-                Console.WriteLine("неверное значение b");
-                return;
-            }
+            b = TryParse.DoubleTryParse();
             s = a * b;
             Console.WriteLine("s=" + s);
         }

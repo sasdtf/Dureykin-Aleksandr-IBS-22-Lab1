@@ -4,8 +4,10 @@ namespace Lab1Task4
 {
     internal class Program
     {
-        public static void triangle(int n, int space, int starsfirst)
+        public static void triangle(int n, int space)
         {
+           
+            int starsfirst = 1;
             for (int i = 0; i < n; i++)
             {
                 for (int j = 0; j < space; j++)
@@ -26,14 +28,13 @@ namespace Lab1Task4
         {
             int N;
             int space;
-            int starsfirst = 1;
             int n = 1;
-            Console.Write("сколько триугольников должно быть?");
-            N = AllParse.IntParse();
+            Console.Write("сколько треугольников должно быть?");
+            N = TryParse.IntTryParse();
             space = N - 1;
             for (int i = 0; i < N; i++)
             {
-                triangle(n, space, starsfirst);
+                triangle(n, space);
                 n++;
             }
         }
